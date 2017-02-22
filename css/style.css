@@ -16,44 +16,52 @@ header {
 }
 
 h1 {
-    display: inline-block;
+    align-self: flex-start;
     font-size: 1.5em;
+    margin: 0;
 }
 
 #nav {
     display: flex;
     justify-content: flex-end;
     height: 100%;
+    position: relative;
 }
-
-header ul {
+button {
+    align-self: flex-start;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.navbar ul {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     flex-direction: column;
+    width: 100%;
 }
 ul li {
     list-style-type: none;
     text-transform: uppercase;
     height: inherit;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0.8em;
+    width: 100%;
 }
 a {
     text-decoration: none;
-    /*height: inherit;*/
+    width: 100%;
 }
-
 header a {
     color: white;
     padding: 1em;
 }
-
 header a:hover {
     background-color: green;
     text-decoration: none;
     color: white;
-
 }
-
 .selected {
     color : green;
 }
@@ -64,7 +72,6 @@ header a:hover {
     height: 65%;
     margin: 2px 0 0 -13px;
 }
-
 img {
     width: 100%;
 }
@@ -85,11 +92,31 @@ h3 {
     color: black;
 }
 @media screen and (min-width:794px)  {
+    header{
+        display: flex;
+        align-items: center;
+    }
+    header a:hover {
+        background-color: green;
+        text-decoration: none;
+        color: white;
+    }
+    h1 {
+        display: inline-block;
+    }
     section {
         display: flex;
         flex-wrap: wrap;
     }
-
+    #nav {
+        display: flex;
+        align-items: center;
+    }
+    #bs-example-navbar-collapse-1 ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
     section article {
         width: 50%;
 
@@ -102,6 +129,7 @@ h3 {
 
     header ul li {
         display: inline-block;
+        border: none;
     }
 
 }
