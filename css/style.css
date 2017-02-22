@@ -2,41 +2,43 @@ body {
     background-color: black;
     color: white;
 }
-
-
 h1 {
     display: inline-block;
+    font-size: 1.5em;
 }
-
 header {
     display: flex;
     justify-content: space-between;
 }
-
 header ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-header ul li {
-    display: inline-block;
+    flex-direction: column;
 }
 ul li {
     list-style-type: none;
-    padding: 0 0.5em;
     text-transform: uppercase;
+    height: inherit;
 }
-
-section {
-    display: flex;
+a {
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    padding: 1em;
+    /*padding: inherit;*/
 }
+a:hover {
+    background-color: green;
+    text-decoration: none;
 
-section article {
-    
 }
-
+.selected {
+    color : green;
+}
+.selected:hover {
+    color : white;
+}
 img {
     width: 100%;
 }
@@ -55,4 +57,39 @@ h3 {
 #white {
     background-color: white;
     color: black;
+}
+@media screen and (min-width:794px)  {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section article {
+        width: 50%;
+
+    }
+    header ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    header ul li {
+        display: inline-block;
+    }
+
+}
+
+
+
+@media screen and (min-width: 970px)  {
+    section {
+        display: flex;
+    }
+
+    section article {
+        flex: 1;
+    }
+
 }
